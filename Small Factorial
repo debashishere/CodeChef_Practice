@@ -1,0 +1,55 @@
+PROBLEM STATEMENT:- 
+Small Factorial
+-------------------------------------------------------------------------------------------------------------
+
+Write a program to find the factorial value of any number entered by the user.
+
+Input
+The first line contains an integer T, total number of testcases. Then follow T lines, each line contains an integer N.
+
+Output
+Display the factorial of the given number N .
+
+Constraints
+1 ≤ T ≤ 1000
+0 ≤ N ≤ 20
+Example
+Input
+3 
+3 
+4
+5
+
+Output
+
+6
+24
+120
+
+-------------------------------------------------------------------------------------------------------------
+Time Limit:	1 secs
+Source Limit:	50000 Bytes
+-------------------------------------------------------------------------------------------------------------
+SOLUTION:-
+-------------------------------------------------------------------------------------------------------------
+
+#include<stdio.h>
+
+int main()
+{
+	int t,n,i;
+	long long int f;
+	scanf("%d",&t);
+	while(t--)
+	{
+		f=1;
+		scanf("%d",&n);
+		for(i=1;i<=n;i++)
+		{
+			f=f*i;
+		}
+		printf("%lld\n",f);
+	}
+}
+
+-------------------------------------------------------------------------------------------------------------
