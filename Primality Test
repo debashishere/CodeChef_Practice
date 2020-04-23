@@ -1,0 +1,70 @@
+PROBLEM STATEMENT:- 
+
+-------------------------------------------------------------------------------------------------------------
+
+Alice and Bob are meeting after a long time. As usual they love to play some math games. This times Alice takes the call and decides the game. The game is very simple, Alice says out an integer and Bob has to say whether the number is prime or not. Bob as usual knows the logic but since Alice doesn't give Bob much time to think, so Bob decides to write a computer program.
+
+Help Bob accomplish this task by writing a computer program which will calculate whether the number is prime or not .
+
+Input
+The first line of the input contains T testcases, T lines follow
+
+Each of T line contains an integer N which has to be tested for primality
+
+Output
+For each test case output in a separate line, "yes" if the number is prime else "no"
+
+Constraints
+- 1≤T≤20
+
+- 1≤N≤105
+
+Input:
+5
+23
+13
+20
+1000
+99991
+
+Output:
+yes
+yes
+no
+no
+yes
+-------------------------------------------------------------------------------------------------------------
+Time Limit:	1 secs
+Source Limit:	50000 Bytes
+-------------------------------------------------------------------------------------------------------------
+SOLUTION:-
+-------------------------------------------------------------------------------------------------------------
+
+#include<stdio.h>
+
+int main()
+{
+	int t,n,flag,i=2;
+	scanf("%d",&t);
+	while(t--)
+	{
+		scanf("%d",&n);
+		flag=1;
+		for(i=2;i<n/2;i++)
+		{
+			if(n%i==0)
+			{
+			flag=0;
+		}
+			
+		}
+		if(flag==0)
+			printf("no\n");
+			else
+			printf("yes\n");
+	}
+	
+	
+}
+
+-------------------------------------------------------------------------------------------------------------
