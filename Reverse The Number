@@ -1,0 +1,54 @@
+PROBLEM STATEMENT:- 
+Reverse The Number
+-------------------------------------------------------------------------------------------------------------
+Input
+The first line contains an integer T, total number of testcases. Then follow T lines, each line contains an integer N.
+
+Output
+Display the reverse of the given number N.
+
+Constraints
+1 ≤ T ≤ 1000
+1 ≤ N ≤ 1000000
+Example
+Input
+4
+12345
+31203
+2123
+2300
+Output
+54321
+30213
+3212
+32
+-------------------------------------------------------------------------------------------------------------
+Time Limit:	1 secs
+Source Limit:	50000 Bytes
+-------------------------------------------------------------------------------------------------------------
+SOLUTION:-
+-------------------------------------------------------------------------------------------------------------
+
+#include<stdio.h>
+
+int main()
+{
+	
+	int t,n,rim,rev,i;
+	scanf("%d",&t);
+		for(i=0;i<t;i++)
+		{
+	scanf("%d",&n);
+    rev=0;
+	while(n!=0)
+	{
+	rim=n%10;
+	n=n/10;
+	rev=rev*10+rim;	
+	}
+	printf("%d\n",rev);
+}
+ 
+}
+
+-------------------------------------------------------------------------------------------------------------
