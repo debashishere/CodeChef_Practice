@@ -1,0 +1,60 @@
+PROBLEM STATEMENT:- 
+Total Expenses
+-------------------------------------------------------------------------------------------------------------
+
+While purchasing certain items, a discount of 10% is offered if the quantity purchased is more than 1000.
+If the quantity and price per item are input, write a program to calculate the total expenses.
+
+Input
+The first line contains an integer T, total number of test cases. Then follow T lines, each line contains integers quantity and price.
+
+Output
+Output the total expenses while purchasing items.
+
+Constraints
+1 ≤ T ≤ 1000
+1 ≤ quantity,price ≤ 100000
+Example
+Input
+
+3 
+100 120
+10 20
+1200 20
+
+Output
+
+12000.000000
+200.000000
+21600.000000
+
+-------------------------------------------------------------------------------------------------------------
+Time Limit:	1 secs
+Source Limit:	50000 Bytes
+-------------------------------------------------------------------------------------------------------------
+SOLUTION:-
+-------------------------------------------------------------------------------------------------------------
+
+#include<stdio.h>
+ 
+int main()
+{
+	int t;
+	long long int q,n;
+	double  temp,price=0;
+	scanf("%d",&t);
+	while(t--)
+	{
+		scanf("%lld%lld",&q,&n);
+		if(q>=1000)
+		{
+		temp=n*q*.1;
+		price=(n*q)-temp;
+    	}
+		else
+		price=n*q;	
+		printf("%lf\n",price);
+	}
+} 
+
+-------------------------------------------------------------------------------------------------------------
